@@ -1,0 +1,74 @@
+  // Menu icon
+  .hamburguer {
+    position:absolute;
+    right:0; 
+    margin:40px;      
+    border:0;
+    z-index:999;  
+    cursor:pointer;  
+    outline:none;
+    
+    // Menu bar
+    .bread {
+      width: 40px;
+      height: 5px;
+      background-color: gold;
+      margin: 10px 0;
+      transition: .2s;
+    }  
+  }
+  
+  
+  // Navigation with links
+  nav {  
+    opacity:0;
+    visibility: hidden;   
+    width:100%;
+    height:100vh;  
+    z-index:999;  
+    background:black;
+    transition-duration:.5s;
+    backface-visibility:none;
+    // padding: 60px;
+    
+    ul {    
+      width:100%;
+      height:100vh;
+      max-height:100vh;
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      padding-top: 120px; 
+      text-align:center;
+      list-style:none;
+      
+      li {      
+        
+        a {
+          display:block; 
+          padding:10px 0;
+          transition-duration:.6s;
+          font-size:2rem; 
+          color:white; 
+          text-decoration:none;
+           
+          &:hover {
+            cursor:pointer;      
+            color:gold;
+          }
+        }      
+      }
+    }
+  }
+  
+  //NAV OPENED
+  .open {
+    visibility: visible; 
+    opacity:1;
+  }
+  .home{
+    position: fixed;
+    top: 50%;
+    text-align: center;
+    font-size: 60px;
+  }

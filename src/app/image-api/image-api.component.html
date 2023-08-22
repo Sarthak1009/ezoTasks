@@ -1,0 +1,30 @@
+<div class="main-container">
+    <p class="close" [routerLink]="['/ezoTasks']"><span class="pointer">X</span></p>
+    <div class="container">
+        <!-- Card deck -->
+        <div class="search-results">
+        <div class="card-deck row">
+            <div class="col-xs-6 col-sm-6 col-md-4" *ngFor="let item of arrayForLoop">
+                <!-- Card -->
+                <div class="card">
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{item.url}}"
+                            alt="{{item.itemName}}">
+                    </div>
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">{{item.itemName}}</h4>
+                        <!--Text-->
+                        <h3>RS. {{item.itemPrice}}</h3>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+        </div>
+        <!-- Card deck -->
+    </div>
+</div>

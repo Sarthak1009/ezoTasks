@@ -1,0 +1,47 @@
+<div class="main-container">
+    <p class="close" [routerLink]="['/ezoTasks']"><span class="pointer">X</span></p>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th colspan="4" scope="col">Current Available Denomination in Machine</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of arrayForDenominations;index as i">
+                <th scope="row">{{item.Denomination}}</th>
+                <td>{{item.count}}</td>
+                <td>|</td>
+                <td><input class="form-control" type="number" (keyup)="depositVal(i)" [(ngModel)]="item.addNotes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Total</th>
+                <td>{{total}}</td>
+                <td>|</td>
+                <td class="align-right"><button type="button" class="btn btn-primary" [disabled]="disableDeposit" (click)="DepositAmount()">Deposit</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td><input class="form-control" type="number" [(ngModel)]="withdrawal"></td>
+                <td class="align-right"><button type="button" class="btn btn-success" [disabled]="withdrawal < 99" (click)="withdrawAmount()">Withdraw!</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="log">
+            <h3>Log</h3>
+            <div class="alllogs" *ngFor="let item of arrayForLog">
+                <div class="alert alert-danger" *ngIf="item.type != 'Deposit'">
+                    {{item.type}} {{item.denominations}}<br>
+                    <small>{{item.time}}</small> 
+                </div>
+                <div class="alert alert-info" *ngIf="item.type == 'Deposit'">
+                    {{item.type}} {{item.denominations}}<br>
+                    <small>{{item.time}}</small> 
+                </div>
+            </div>
+          </div>
+    </div>
+</div>

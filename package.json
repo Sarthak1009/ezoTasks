@@ -1,6 +1,9 @@
 {
-  "name": "ezo-tasks",
-  "version": "0.0.0",
+  "name": "com.example.hello",
+  "displayName": "ezoTasks",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,6 +21,10 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@angular/service-worker": "^16.0.0",
+    "bootstrap": "^5.3.1",
+    "cordova": "^12.0.0",
+    "jquery": "^3.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -33,6 +40,15 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.0.2"
+    "typescript": "~5.0.2",
+    "bootstrap": "^5.3.1",
+    "cordova": "^12.0.0",
+    "jquery": "^3.7.0",
+    "cordova-android": "^12.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
   }
 }
